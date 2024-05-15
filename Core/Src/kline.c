@@ -121,11 +121,8 @@ void main_loop(void) {
 
 		HAL_UART_Transmit(&huart2, T17, T17[1], 100);
 
-		//			CDC_Transmit_FS(filteredData, filteredData[1]);
-
-
 		char *string_array = (char*) malloc((filteredData[1] * 2 + 1) * sizeof(char));
-		//
+
 		for (int i = 0; i < filteredData[1]; i++) {
 			sprintf(&string_array[i * 2], "%02X", filteredData[i]);
 		}
