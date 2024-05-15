@@ -1,0 +1,2 @@
+../Core/Src/nbt.c:12:6:NBT_init	16	static
+../Core/Src/nbt.c:18:6:NBT_handler	16	static
