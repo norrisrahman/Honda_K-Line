@@ -123,18 +123,14 @@ void main_loop(void) {
 
 		//			CDC_Transmit_FS(filteredData, filteredData[1]);
 
-		uint8_t data[] = { 0x02, 0x13, 0x71, 0x13, 0x00, 0x00, 0x06, 0x00, 0xFF, 0x00, 0xFF, 0x00,
-				0xF2, 0xA8, 0x74, 0x00, 0x00, 0x80, 0xD5 };
 
-		uint8_t *fd = data;
-
-		char *string_array = (char*) malloc((fd[1] * 2 + 1) * sizeof(char));
+		char *string_array = (char*) malloc((filteredData[1] * 2 + 1) * sizeof(char));
 		//
-		for (int i = 0; i < fd[1]; i++) {
-			sprintf(&string_array[i * 2], "%02X", fd[i]);
+		for (int i = 0; i < filteredData[1]; i++) {
+			sprintf(&string_array[i * 2], "%02X", filteredData[i]);
 		}
 
-		CDC_Transmit_FS((uint8_t*) string_array, fd[1] * 2);
+		CDC_Transmit_FS((uint8_t*) string_array, filteredData[1] * 2);
 
 		free(string_array);
 		free(filteredData);

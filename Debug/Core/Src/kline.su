@@ -6,4 +6,4 @@
 ../Core/Src/kline.c:72:6:UART_TURN_OFF	24	static
 ../Core/Src/kline.c:84:6:UART_TURN_ON	8	static
 ../Core/Src/kline.c:91:6:resetGpio	8	static
-../Core/Src/kline.c:105:6:main_loop	48	static
+../Core/Src/kline.c:105:6:main_loop	16	static
